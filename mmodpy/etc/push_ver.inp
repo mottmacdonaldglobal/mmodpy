@@ -1,0 +1,13 @@
+#
+# Read data from models and files
+#
+model none
+model 1
+node all displacement z tag node_*
+beam all normal x tag beam_*
+#
+# Set all graphs active
+#
+layout graph select all
+# Write curves to .csv files
+csv2 push_ver.csv node_1 beam_1 auto

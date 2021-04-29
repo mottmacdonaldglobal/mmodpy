@@ -1,0 +1,6 @@
+model none
+model 1
+node all displacement z tag disp_*
+Ng all force z tag force_*
+operate com disp_* force_* tag lcurve_*
+csv2 found_lcurve_z.csv lcurve_* auto

@@ -1,0 +1,226 @@
+# Program:  FASTTCF
+# Filetype:  Postscript
+# Filename:  script_output.png
+#
+# Built in variables:
+# ==================
+# $ftcf_script: Name of the FAST-TCF that is being run.
+# $ftcf_script_dir: Name of the FAST-TCF directory.
+# $ftcf_dir: Name of the current working directory.
+# $ftcf_path: Full pathname of the current working directory.
+# $ftcf_startin_dir: Directory T/HIS was started from.
+#
+# $run_name: Basename of the key file for the first model.
+# $run_dir: Full pathname of output file directory.
+# $run_title: Title of the analysis found in the output files.
+#
+# If a script refers to multiple models then, $run_nameN,
+# $run_dirN, $run_titleN (where N is the model number) can
+# be used for each model.
+#
+version 13.1
+#
+include ./node_id.inp
+# Job file:  C:\Users\iraklis.koutrouvelis\Desktop\Automation\SRA_V2.0\Results\sra.thf
+#
+# Create additional graphs
+#
+layout graph total  1
+#
+# Setup page layouts
+#
+layout page wide
+#
+# Remove graphs from all pages
+#
+layout page all none
+#
+# Add graphs to page  1 and position them
+#
+layout page  1 add graph  1
+layout page  1 graph  1 position 0.00,-.00 1.00,1.00
+#
+# Setup axis positions and properties
+#
+layout graph 1 axis position auto auto auto auto
+layout graph 1 x-axis format automatic
+layout graph 1 x-axis precision 3
+layout graph 1 y-axis format automatic
+layout graph 1 y-axis precision 3
+#
+# Setup legend format and position
+#
+layout graph 1 legend format column
+layout graph 1 legend columns 2
+#
+# Read data from models and files
+#
+model none
+model 1
+node $nid acceleration x tag curve_1
+node $nid acceleration y tag curve_2
+#
+# Operations for unblanked curves
+#
+reg 0.020000
+operation rs curve_1 0.05 70 1 tag curve_3 curve_4 curve_5 curve_6 curve_7
+reg 0.020000
+operation rs curve_2 0.05 70 1 tag curve_8 curve_9 curve_10 curve_11 curve_12
+#
+# Delete working curves
+#
+delete curve_1 curve_2 curve_4 curve_5 curve_6 curve_9 curve_10 curve_11
+condense
+#
+# Curve and Legend Properties
+#
+properties format font Default Default foreground
+properties format background background
+properties format border foreground off
+properties format border fine
+properties format arrow off
+properties format transparency 0
+properties format number y_only
+properties format value scientific
+properties format precision 3
+#
+properties legend format append
+properties legend * ## maximum off
+properties legend * ## minimum off
+properties legend * ## average off
+properties legend * ## hic off
+properties legend * ## thiv off
+#
+properties curves format off
+properties curves summary smaximum off
+properties curves summary sminimum off
+properties curves summary lmaximum off
+properties curves summary lminimum off
+properties curves * ## smaximum off
+properties curves * ## lmaximum off
+properties curves * ## sminimum off
+properties curves * ## lminimum off
+#
+# Curve labels - (modified by user)
+#
+# label curve_3  Accel x - Node 1 (Reg 0.004833) (Rel disp)
+# label curve_7  Accel x - Node 1 (Reg 0.004833) (Pseudo abs acc)
+# label curve_8  Accel y - Node 1 (Reg 0.004833) (Rel disp)
+# label curve_12  Accel y - Node 1 (Reg 0.004833) (Pseudo abs acc)
+#
+# Curve Style definitions
+#
+stylec curve_3 cyan,default,solid,cross,1
+stylec curve_7 white,default,dash,star,1
+stylec curve_8 magenta,default,solid,circle,1
+stylec curve_12 magenta,default,dash,hourglass,1
+#
+# Select graph  1
+#
+layout graph select none
+layout graph select  1
+#
+# Plot setup
+#
+setup \
+        title_on \
+        x_label auto \
+        x_label on \
+        x_unit auto \
+        x_unit on \
+        y_label auto \
+        y_label on \
+        y_unit auto \
+        y_unit on \
+        y2_label auto \
+        y2_label on \
+        y2_unit auto \
+        y2_unit on \
+        x_min auto\
+        x_max auto\
+        y_min auto\
+        y_max auto\
+        y2_min auto\
+        y2_max auto\
+        y2_align off \
+        axis normal \
+        axis foreground\
+        double off \
+        border on \
+        border normal \
+        border foreground\
+        axis top on \
+        axis right on \
+        background black\
+        foreground white\
+        grid on \
+        grid normal \
+        symbols off \
+        solid off \
+        line normal \
+        line on \
+        fix off \
+        xlin \
+        ylin \
+        y2lin \
+        mp auto \
+        prefix id \
+        Xauto \
+        Yauto \
+        font title Default Default foreground \
+        font xlabel Default Default foreground \
+        font ylabel Default Default foreground \
+        font y2label Default Default foreground \
+        font legend Default Default foreground \
+        font xunit Default Default foreground \
+        font yunit Default Default foreground \
+        font y2unit Default Default foreground
+#
+# User lines setup
+#
+#
+# Unblank curves in graph and set up axis labels and title
+#
+display curve_3 curve_7 curve_8 curve_12 
+#
+# Set all graphs active
+#
+layout graph select all
+#
+# Write curves to .csv files
+csv2 response_spec.csv 1 2 3 4 auto
+delete *
+#
+# Additional SRA output
+#
+solid all stress vm tag svm_solid_*
+#
+# Set all graphs active
+#
+layout graph select all
+delete *
+#
+solid all stress vm tag svm_solid_*
+#
+# Convert to effective shear stress
+#
+oper mul svm_solid_* 0.57735 tag strs_solid_*
+#
+# Set all graphs active
+#
+layout graph select all
+# Write curves to .csv files
+csv2 shear_stresses.csv strs_solid_* auto
+delete *
+#
+solid all strain vm tag evm_solid_*
+#
+# Convert to effective shear strains
+#
+oper mul evm_solid_* 1.5 tag strn_solid_*
+#
+# Set all graphs active
+#
+layout graph select all
+# Write curves to .csv files
+csv2 shear_strains.csv strn_solid_* auto

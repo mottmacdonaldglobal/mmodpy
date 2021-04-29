@@ -1,0 +1,53 @@
+version 16.0
+#
+node 306205 displacement x tag curve_1
+node 389057 displacement x tag curve_2
+node 1491 displacement x tag curve_3
+node 348527 displacement x tag curve_4
+node 351299 displacement x tag curve_5
+node 354071 displacement x tag curve_6
+node 356843 displacement x tag curve_7
+node 359615 displacement x tag curve_8
+node 362387 displacement x tag curve_9
+node 365159 displacement x tag curve_10
+node 367931 displacement x tag curve_11
+node 370703 displacement x tag curve_12
+node 373475 displacement x tag curve_13
+node 376247 displacement x tag curve_14
+node 379019 displacement x tag curve_15
+node 381791 displacement x tag curve_16
+node 384563 displacement x tag curve_17
+node 387335 displacement x tag curve_18
+node 48459 displacement x tag curve_19
+node 48579 displacement x tag curve_20
+node 389 displacement x tag curve_21
+node 306205 displacement y tag curve_22
+node 389057 displacement y tag curve_23
+node 1491 displacement y tag curve_24
+node 348527 displacement y tag curve_25
+node 351299 displacement y tag curve_26
+node 354071 displacement y tag curve_27
+node 356843 displacement y tag curve_28
+node 359615 displacement y tag curve_29
+node 362387 displacement y tag curve_30
+node 365159 displacement y tag curve_31
+node 367931 displacement y tag curve_32
+node 370703 displacement y tag curve_33
+node 373475 displacement y tag curve_34
+node 376247 displacement y tag curve_35
+node 379019 displacement y tag curve_36
+node 381791 displacement y tag curve_37
+node 384563 displacement y tag curve_38
+node 387335 displacement y tag curve_39
+node 48459 displacement y tag curve_40
+node 48579 displacement y tag curve_41
+node 389 displacement y tag curve_42
+#
+display curve_*
+#
+# Set all graphs active
+#
+layout graph select all
+#
+#csv2 story_displacements_temp2.csv 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 auto
+csv2 story_displacements.csv * auto
