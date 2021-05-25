@@ -1,0 +1,86 @@
+:Base XTRACT.hlp
+:Title XTRACT
+1 Getting Started
+2 XTRACT=XTRACT
+2 Where To Begin=Where_To_Begin
+2 What is New=What_is_new
+2 Options=Options
+2 Project Manager=Project_Manager
+2 Title Bar Layout=Title_Bar_Layout
+2 Toolbar Icon Definitions=Toolbar_Icon_Definitions
+1 Nonlinear Material Models
+2 Material Models=Material_Models
+2 Concrete Models
+3 Mander Unconfined Concrete=Mander_Unconfined_Concrete
+3 Mander Confined Concrete=Mander_Confined_Concrete
+3 Confined Concrete Strength Calculator=Confined_Concrete_Strength_Calculator
+3 Crushing Strain Calculator=Crushing_Strain_Calculator
+2 Steel Models
+3 BiLinear Steel Material Model=BiLinear_Steel_Material_Model
+3 BiLinear with Strain Hardening Material Model=BiLinear_with_Strain_Hardening_Material_Model
+3 Prestressing Steel Material Model=Prestressing_Steel_Material_Model
+2 Other Models
+3 Menegotto Pinto Material Model=Menegotto_Pinto_Material_Model
+3 User Defined Material Model=User_Defined_Material_Model
+3 The Delete Material=The_Delete_Material
+1 Project and Sections
+2 New Project=New_Project
+2 Example Project Input File=Example_Project_Input_File
+2 Project Properties=Project_Properties
+2 Adding and Creating Cross Sections
+3 Section Builder=Section_Builder
+3 Adding New Sections=Adding_New_Sections
+3 Rules for Section Creation=Rules_for_Section_Creation
+3 Section Template=Section_Template
+3 Add a Section From File=Add_a_Section_From_File
+3 User Defined Cross Section=User_Defined_Cross_Section
+3 Discretizer=Discretizer
+2 Export Sections
+3 Export to OpenSees=Export_to_OpenSees
+3 Export XTRACT Section=Export_XTRACT_Section
+2 Builder Modes
+3 Builder Modes=Builder_Modes
+3 Builder Tools Toolbar=Builder_Tools_Toolbar
+3 Lock Section=Lock_Section
+3 Change Material Mode=Change_Material_Mode
+3 Add AISC Shape Mode=Add_AISC_Shape_Mode
+3 Remesh Mode=Remesh_Mode
+3 Draw and Import Shapes
+4 Draw Shape Mode=Draw_Shape_Mode
+4 Importing Shapes into User Defined Sections=Importing_Shapes_into_User_Defined_Sections
+4 Enter Points By Coordinates=Enter_Points_By_Coordinates
+3 Adding Reinfocement
+4 Add Reinforcing Bars Mode=Add_Reinforcing_Bars
+4 Add Reinforcing Bars Using the Mouse=Add_Reinforcing_Bars_Using_the_Mouse
+4 Add Reinforcing Bars by Coordinates=Add_Reinforcing_Bars_by_Coordinates
+4 Generate Reinforcing Bars=Generate_Reinforcing_Bars
+4 Running Generation Mode=Running_Generation_Mode
+4 Bar Properties Editor=Bar_Properties_Editor
+4 Selecting, Modifying, Moving, Copying, and Mirroring Reinforcing Bars=Selecting_Modifying_Moving_Copying_and_Mirroring_Reinforcing_Bars
+1 Analysis Options
+2 Run Analysis=Run_Analysis
+2 Axial Force Moment Interaction
+3 Axial Force Moment Interaction Analysis=Axial_Force_Moment_Interaction_Analysis
+3 Axial Force Moment Interaction Reduction Factors=Axial_Force_Moment_Interaction_Reduction_Factors
+2 Moment Curvature Analysis
+3 Moment Curvature Analysis=Moment_Curvature_Analysis
+3 Plastic Hinge Parameters=Plastic_Hinge_Parameters
+3 Solution Method for Moment Curvature Analysis=Solution_Method_for_Moment_Curvature_Analysis
+3 Bilinearization of the Moment Curvature Diagram=Bilinearization_of_the_Moment_Curvature_Diagram
+2 Capacity Orbit Analysis
+3 Moment-Moment Interaction Analysis=Moment_Moment_Interaction_Analysis
+1 Viewing Analysis Results
+2 Printing and Output Capabilities=Printing_and_Output_Capabilities
+2 Input File=Input_File
+2 Data Viewer=Data_Viewer
+2 Show Data=Show_Data
+2 Add Graph=Add_Graph
+2 Data Graphs=Data_Graphs
+2 Interactive Output=Interactive_Output
+2 Create AVI=Create_AVI
+2 Reports
+3 Print Material Models=Print_Material_Models
+3 Material Report=Material_Report
+3 Section Report=Section_Report
+3 Analysis Report=Analysis_Report
+3 Graph Report=Graph_Report

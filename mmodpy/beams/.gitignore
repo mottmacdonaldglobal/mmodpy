@@ -1,0 +1,8 @@
+# File Types to Ignore #
+########################
+*.pyc
+*.key
+*.k
+*.txt
+*.xpj
+*.csv
