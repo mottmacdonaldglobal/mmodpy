@@ -19,11 +19,11 @@ Optional:
 ## Usage
 
 1. Install with pip <br />
-`pip install autodyna`
+`pip install beams`
 2. Import the library <br />
-`import autodyna`
+`import beams`
 3. Run the MAT_ELASTIC function <br />
-`autodyna.Beams.MAT_ELASTIC([options])`
+`beams.Beams.MAT_ELASTIC([options])`
 
 ## Workflow
 ![Diagram](Resources/elasticBeams.png)
