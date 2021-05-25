@@ -25,11 +25,11 @@ Optional:
 ## Usage
 
 1. Install with pip <br />
-`pip install beams`
+`pip install mmodpy`
 2. Import the library <br />
-`import beams`
+`import mmodpy`
 3. Run the MAT_HYSTERETIC_BEAM function <br />
-`beams.Beams.MAT_HYSTERETIC_BEAM([options])`
+`mmodpy.beams.MAT_HYSTERETIC_BEAM([options])`
 
 ## Workflow
 ![Diagram](Resources/hysBeams.png)
