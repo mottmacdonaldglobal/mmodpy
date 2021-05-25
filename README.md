@@ -14,5 +14,5 @@ Developer: @kevin.stanton
 `import mmodpy`
 
 ## Usage
-'mmodpy.[module].[function](args)'
+`mmodpy.[module].[function](args)`
 
