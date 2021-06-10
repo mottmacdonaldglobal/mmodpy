@@ -18,18 +18,14 @@ Required:
 	- [Documentation](https://github.com/Riamse/autopy3)
 	- [Installation file](Resources/autopy3-0.51.1-cp37-cp37m-win_amd64.whl)
 
-Optional:
-* Spyder/Anaconda
-
-
 ## Usage
 
 1. Install with pip <br />
-`pip install mmodpy`
+`pip install git+https://github.com/mottmacdonaldglobal/mmodpy`
 2. Import the library <br />
-`import mmodpy`
+`import mmodpy.beams as beams`
 3. Run the MAT_HYSTERETIC_BEAM function <br />
-`mmodpy.beams.MAT_HYSTERETIC_BEAM([options])`
+`beams.MAT_HYSTERETIC_BEAM([options])`
 
 ## Workflow
 ![Diagram](Resources/hysBeams.png)
@@ -70,7 +66,7 @@ def MAT_HYSTERETIC_BEAM(
         write_log=False,
         user_xpj=False,
         settings_path=''):
-    """
+    '''
     This function writes MAT_HYSTERETIC_BEAM cards for LS-DYNA. DO NOT TOUCH
     THE MOUSE WHILE CODE IS RUNNING unless the manual intervention option is
     enabled.
@@ -214,5 +210,6 @@ def MAT_HYSTERETIC_BEAM(
     hysBeams.log : file (optional)
         The console output written to a log file
         Not written in write_log = False
+    '''
 ```
     
