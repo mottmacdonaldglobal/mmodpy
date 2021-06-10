@@ -6,4 +6,4 @@ from mmodpy._mmodpy import (
     th_to_key
 )
 
-from mmodpy import port
+from mmodpy.port import leapfrog_to_dyna
