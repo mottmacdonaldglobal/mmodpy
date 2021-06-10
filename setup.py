@@ -8,7 +8,7 @@ Created on Mon Apr 29 15:26:36 2019
 from setuptools import setup, find_packages
 
 setup(name='mmodpy',
-      version='1.0.7',
+      version='1.0.8',
       description='A collection of automation scripts to expedite LS-DYNA analytics.',
       url='https://github.com/mottmacdonaldglobal/mmodpy.git',
       author='Kevin Stanton',
