@@ -7,7 +7,6 @@ Created on Tue Jun  8 21:10:25 2021
 
 import pandas as pd
 import numpy as np
-import os
 
 def leapfrog_to_dyna(input_csv, output='model.key'):
     
@@ -21,15 +20,15 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
     input_csv : str
         Full file path for the input LeapFrog .csv data file
         Only filename required if located in cwd
-    output_path : str
+    output : str
         Full file path desired for the output file (.key)
         Only filename required if located in cwd
+        Default = 'model.key'
     
     Returns
     -------
-    model.key : file
-        List of new or modified files produced in the thf_path directory
-        Default = cwd/'model.key'
+    {file}.key : file
+        LS-DYNA keyword file 
     '''
 
     # read in data
