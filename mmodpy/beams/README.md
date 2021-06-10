@@ -16,6 +16,6 @@ Developer: @Kevin.Stanton
 ## Functions
 
 * MAT_HYSTERETIC_BEAM
-    - [ReadMe](https://https://github.com/mottmacdonaldglobal/mmodpy/new/main/mmodpy/beams/ReadMe_hysBeams.md)
+    - [ReadMe](https://github.com/mottmacdonaldglobal/mmodpy/blob/main/mmodpy/beams/ReadMe_hysBeams.md)
 * MAT_ELASTIC
-    - [ReadMe](https://github.com/mottmacdonaldglobal/mmodpy/new/main/mmodpy/beams/ReadMe_elasticBeams.md)
+    - [ReadMe](https://github.com/mottmacdonaldglobal/mmodpy/blob/main/mmodpy/beams/ReadMe_elasticBeams.md)
