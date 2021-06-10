@@ -26,10 +26,10 @@ Required:
 
 ```python
 def leapfrog_to_dyna(input_csv, output='model.key'):
-    
+    '''
     This function reads in data from LeapFrog and produces an LS-DYNA keyword
     file that contains PART, solid_data, and NODE data. Intended for
-    porting 3D soil mesh data. 
+    porting 3D soil mesh data.
     
     Parameters
     ----------     
@@ -44,5 +44,6 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
     Returns
     -------
     {file}.key : file
-        LS-DYNA keyword file 
+        LS-DYNA keyword file
+    '''
 ```
