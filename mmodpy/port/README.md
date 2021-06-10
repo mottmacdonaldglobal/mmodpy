@@ -20,7 +20,7 @@ Required:
 `port.leapfrog_to_dyna(input_csv_path)`
 
 ## Workflow
-![Diagram](leapfrog_to_dyna.png)
+![Diagram](https://github.com/mottmacdonaldglobal/mmodpy/blob/main/mmodpy/port/leapfrog_to_dyna.PNG)
 
 ## Options    
 
