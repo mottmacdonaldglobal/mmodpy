@@ -22,6 +22,9 @@ Required:
 ## Workflow
 ![Diagram](https://github.com/mottmacdonaldglobal/mmodpy/blob/main/mmodpy/port/leapfrog_to_dyna.PNG)
 
+### [Example input file (csv)](https://github.com/mottmacdonaldglobal/mmodpy/blob/main/mmodpy/etc/example_leapfrog_to_dyna_input.csv)
+
+
 ## Options    
 
 ```python
