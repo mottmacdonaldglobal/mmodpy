@@ -1,5 +1,5 @@
 // <AUTHOR/> M BOWERS <\AUTHOR>
-// THis script is a snippet of code which can be dropped into any primer/d3Plot Java to create and write out to a csv file of your choice
+// This script is a snippet of code which can be dropped into any primer/d3Plot Java to create and write out to a csv file of your choice
 
 var filename = "C:\\output.csv"; //change to whatever you want
 
