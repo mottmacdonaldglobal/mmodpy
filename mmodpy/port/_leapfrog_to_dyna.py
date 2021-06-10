@@ -6,6 +6,7 @@ Created on Tue Jun  8 21:10:25 2021
 """
 
 import pandas as pd
+pd.options.mode.chained_assignment = None
 import numpy as np
 
 def leapfrog_to_dyna(input_csv, output='model.key'):
