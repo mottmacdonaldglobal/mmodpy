@@ -11,19 +11,15 @@ MAT_ELASTIC [(LS-DYNA documentation)](Resources/LS-DYNA_manual_Vol2.pdf)
 
 Required:
 * Python 3
-
-Optional:
-* Spyder/Anaconda
-
     
 ## Usage
 
 1. Install with pip <br />
-`pip install beams`
+`pip install git+https://github.com/mottmacdonaldglobal/mmodpy`
 2. Import the library <br />
-`import beams`
+`import mmodpy.beams as beams`
 3. Run the MAT_ELASTIC function <br />
-`beams.Beams.MAT_ELASTIC([options])`
+`beams.MAT_ELASTIC([options])`
 
 ## Workflow
 ![Diagram](Resources/elasticBeams.png)
@@ -41,7 +37,7 @@ def MAT_ELASTIC(
         company='Arup',
         job_name='dev',
         write_log=False):
-    """
+    '''
     This function writes MAT_ELASTIC and section cards for LS-DYNA beam
     elements.
 
@@ -95,4 +91,5 @@ def MAT_ELASTIC(
         The console output is written to a log file the pSave directory stamped
         with the analysis start date/time
         Not written if write_log = False
+        '''
 ```
