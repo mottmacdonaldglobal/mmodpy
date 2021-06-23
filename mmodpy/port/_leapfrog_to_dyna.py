@@ -8,6 +8,7 @@ Created on Tue Jun  8 21:10:25 2021
 import pandas as pd
 pd.options.mode.chained_assignment = None
 import numpy as np
+import os
 
 def leapfrog_to_dyna(input_csv, output='model.key'):
     
@@ -52,11 +53,11 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
     NODE = '\n'.join(NODE)
     
     ## PART ##
-    geo_title = df.columns[-1].title()
+    geo_title = df.columns[-1]
     parts = pd.DataFrame(df[df.columns[-1]].unique())
     parts = parts.rename(columns = {parts.columns[-1]:geo_title})
     parts['PID'] = parts.index + 1
-    df = df.merge(parts[[df.columns[-1].title(),'PID']],how='left')
+    df = df.merge(parts[[geo_title,'PID']],how='left')
     part_data = parts[['PID']]
     part_data['SID'] = 1
     part_data['MID'] = part_data['PID']
@@ -144,6 +145,9 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
             N8 = np.nan
         df['N8'].loc[i] = N8
         
+        progress = int(round(i*100/len(df),0))
+        print('\x1b[2K\r','\x1b[2K\r','Progress: {}%'.format(progress),end='\x1b[2K\r')
+        
     # create dataframe for solid_data data
     solid_data = pd.DataFrame(df.index + 1)
     solid_data = solid_data.rename(columns = {solid_data.columns[-1]:'EID'})
@@ -170,5 +174,12 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
         '*ELEMENT_SOLID\n' + ELEMENT_SOLID + '\n$\n' +\
         PART + '\n$\n' +\
         '*END'
-    with open('model.key','w') as file:
+    with open(output,'w') as file:
         file.write(key_data)
+    
+    if os.path.dirname(output)=='':
+        out_path = os.path.join(os.getcwd(),output)
+    else:
+        out_path = output
+        
+    print('\n\n','Output keyword file written to:',out_path)
