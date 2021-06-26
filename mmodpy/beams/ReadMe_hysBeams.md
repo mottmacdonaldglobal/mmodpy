@@ -5,7 +5,7 @@ for LS-DYNA. It implements a resultant beam formulation known as
 MAT_HYSTERETIC_BEAM [(LS-DYNA documentation)](Resources/MAT_HYSTERETIC_BEAM.pdf),
 which enables simulation of reinforced concrete beams.
 
-<p>Developers: @Kevin.Stanton, @Ji-Su.Lee, @Sohan.Mone</p>
+<p>Developer: @Kevin.Stanton</p>
 
 
 ## Prerequisites
