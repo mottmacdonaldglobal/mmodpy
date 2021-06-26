@@ -1,4 +1,16 @@
-
+//---------------------------------------------------------------
+// Developed by Kevin Stanton
+//
+// This script generates boundary SRA columns for driving 3D SSI
+// models with a compliant velocity field. This approach is  
+// necesary if the horizontal forces on the lateral boundaries are
+// not expected to be symmetric. This version of the script only 
+// generates lysmer dampers at the base of the new boundary 
+// column elements, not the existing portion of the model. To 
+// generate complete boundary conditions following this approach,
+// refer to boundary_gen_asymmetric.js  
+//---------------------------------------------------------------
+//
 // User input
 //
 var tolerance = 1;  //tolerance for nodes on boundary
