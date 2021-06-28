@@ -14,6 +14,7 @@ This module is a collection of JavaScript files for automation in Oasys Primer o
   - Generates vertical and lateral boundary conditions for driving 3D SSI models with a compliant velocity field (appropriate for asymmetric or symmetric horizontal geometries)  <br />
 * `interpolate_MAT.js` 
   - Assigns materials for elements in a 3D soil model based on soil unit type and nearest distance to materials in an aligned index soil column(s) model  <br />
+  ![Workflow](https://github.com/mottmacdonaldglobal/mmodpy/blob/main/mmodpy/js/interpolate_MAT.PNG)  <br />
 * `symmetric_lateral_boundaries.js`
   - Creates lateral boundary conditions (not vertical) for a 3D soil domain with uniform layering in Primer <br />
 * `asymmetric_lateral_boundaries.js`
