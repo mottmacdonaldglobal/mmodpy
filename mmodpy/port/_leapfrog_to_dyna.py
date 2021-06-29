@@ -35,6 +35,7 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
 
     # read in data
     df = pd.read_csv(input_csv) 
+    input_name = os.path.basename(input_csv)
     
     # shift model coordinates so one corner aligns with the origin
     minX = df['X'].min()
@@ -44,6 +45,14 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
     df['Y'] = df['Y']-minY
     df['Z'] = df['Z']-minZ
     
+    # check that nodes are oriented in an acceptable way for a 3D model
+    x_rng = df['X'].max()
+    y_rng = df['Y'].max()
+    z_rng = df['Z'].max()
+    if x_rng==0 or y_rng==0 or z_rng==0:
+        raise ValueError('Data in \'' + input_name + '\'does not contain \
+                         3D nodal data')
+            
     ## NODE ##
     node_data = df[['Id','X','Y','Z']]
     node_data['TC'] = int(0)
@@ -82,6 +91,10 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
     # populate solid element nodes with correct values assuming current Id is N1
     df_search = df.set_index(['X','Y','Z'])
     for i in range(0,len(df)):
+        
+        progress = int(round(i*100/len(df),0))
+        print('Progress: {}%'.format(progress),end='\r')
+        
         N2x = df['X'].loc[i] + df['dX'].loc[i]
         N2y = df['Y'].loc[i]
         N2z = df['Z'].loc[i]
@@ -145,8 +158,8 @@ def leapfrog_to_dyna(input_csv, output='model.key'):
             N8 = np.nan
         df['N8'].loc[i] = N8
         
-        progress = int(round(i*100/len(df),0))
-        print('\x1b[2K\r','\x1b[2K\r','Progress: {}%'.format(progress),end='\x1b[2K\r')
+        print('\r', end='')
+        print('\r', end='')
         
     # create dataframe for solid_data data
     solid_data = pd.DataFrame(df.index + 1)
