@@ -209,7 +209,7 @@ def MAT_HYSTERETIC_BEAM(
         Contents of Beam-RC_Beam_[ID].key written in JSON format
     hysBeams.log : file (optional)
         The console output written to a log file
-        Not written in write_log = False
+        Not written if write_log = False
     '''
 ```
     
