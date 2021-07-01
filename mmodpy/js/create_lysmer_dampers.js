@@ -14,9 +14,9 @@ var col_width_fac = 5;  //plan size of column = width of main mesh * col_width_f
 var col_offset_fac = 3; //column offset from main mesh by col_offset_fac*width of main mesh * col_width_fac
 
 //lysmer input
-var lysmer_ro = 4.04;
-var lysmer_vs = 1530;
-var lysmer_vp = 3000;
+var lysmer_ro = 4.195;
+var lysmer_vs = 2000;
+var lysmer_vp = 3811;
 var SDOrient = 11;   //start id for orientation vectors for dampers (*DEFINE_SD_ORIENTATION)
 var lclysX = 11; //LCIDs for ground motion velocity time histories
 var lclysY = 12;

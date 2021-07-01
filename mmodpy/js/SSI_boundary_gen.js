@@ -13,15 +13,18 @@
 //
 // User input
 //
-var tolerance = 1;  //tolerance for nodes on boundary
+var tolerance = 0.5;  //tolerance for nodes on boundary
 var col_width_fac = 5;  //plan size of column = width of main mesh * col_width_fac
 var col_offset_fac = 3; //column offset from main mesh by col_offset_fac*width of main mesh * col_width_fac
 
 //lysmer input
-var lysmer_ro = 1.8;
-var lysmer_vs = 1000;
-var lysmer_vp = 1600;
+var lysmer_ro = 4.195;
+var lysmer_vs = 2000;
+var lysmer_vp = 3200;
 var SDOrient = 11;   //start id for orientation vectors for dampers (*DEFINE_SD_ORIENTATION)
+var lclysX = 11; //LCIDs for ground motion velocity time histories
+var lclysY = 12;
+var lclysZ = 13;
 
 //end of user input
 //-------------------------------------------------
@@ -60,22 +63,6 @@ var originx = (xmin + xmax)/2;
 var originy = (ymin + ymax)/2;
 
 Message("Centre " + originx + ", " + originy);
-
-
-// User input
-//
-var tolerance = 1;  //tolerance for nodes on boundary
-var col_width_fac = 5;  //plan size of column = width of main mesh * col_width_fac
-var col_offset_fac = 3; //column offset from main mesh by col_offset_fac*width of main mesh * col_width_fac
-
-//lysmer input
-var lysmer_ro = 4.04;
-var lysmer_vs = 1530;
-var lysmer_vp = 3000;
-var SDOrient = 11;   //start id for orientation vectors for dampers (*DEFINE_SD_ORIENTATION)
-var lclysX = 11; //LCIDs for ground motion velocity time histories
-var lclysY = 12;
-var lclysZ = 13;
 		
 //end of user input
 //-------------------------------------------------
