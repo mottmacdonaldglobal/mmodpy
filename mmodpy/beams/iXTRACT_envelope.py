@@ -1100,7 +1100,7 @@ class iXTRACT_envelope():
             if not aData.showPlots:
                 self.fwrite.write('		Include_Graph = False\n')
                 self.fwrite.write('		Include_Animation = False\n')
-            self.fwrite.write('		ConstAxial = -%s\n' % sN_load)
+            self.fwrite.write('		ConstAxial = %s\n' % sN_load)
             self.fwrite.write('		IncMxx = 113.0\n')
             self.fwrite.write('		Use_Best_Fit = True\n')
             self.fwrite.write('		Calc_Moment_Rot = False\n')

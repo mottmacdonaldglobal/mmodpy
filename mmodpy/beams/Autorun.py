@@ -15,7 +15,7 @@ Notes:
 
 import tkinter as tk
 import subprocess
-from autopy3 import key
+import pyautogui
 import time
 import psutil
 import os
@@ -40,8 +40,8 @@ class Autorun:
         # Get settings data
         self.mcSettings = mcSettings
 
-        # Get autodyna module path
-        import autodyna.Resources.XTRACT as pathIndex
+        # Get mmodpy module path
+        import mmodpy.beams.Resources.XTRACT as pathIndex
         self.xtractPath = os.path.dirname(pathIndex.__file__)
         
         # Determine path to .xpj file to run
@@ -92,7 +92,7 @@ class Autorun:
         time.sleep(1)
         util.click(1, 1)
         time.sleep(1)
-        key.tap(key.K_F5)  # Run analysis
+        pyautogui.press('f5')  # Run analysis
         print('\n   Running XTRACT...')
         util.confirm(aData)
 
@@ -122,8 +122,7 @@ class Autorun:
         time.sleep(1)
         util.click(1, 1)
         time.sleep(1)
-        key.toggle('d', True, key.MOD_CONTROL)
-        key.toggle('d', False, key.MOD_CONTROL)
+        pyautogui.hotkey('ctrl','d')
         time.sleep(self.mcSettings.sleepSLc1 + self.mcSettings.sleepSLc2)
         util.click(int(self.mcSettings.clickPosition1 *
                        self.sWidthF), int(self.mcSettings.clickPosition2 *
@@ -151,18 +150,17 @@ class Autorun:
                        self.sWidthF), int(self.mcSettings.clickPosition6 *
                                           self.sHeightF)) # Click 'Save Data'
         time.sleep(self.mcSettings.sleepSLc1 + self.mcSettings.sleepSLc2 * 0.5)
-        key.toggle('v', True, key.MOD_CONTROL)  # Paste cwd string
-        key.toggle('v', False, key.MOD_CONTROL)
+        pyautogui.hotkey('ctrl','v')  # Paste cwd string
         time.sleep(self.mcSettings.sleepPaste)
-        key.tap(key.K_RIGHT) # Move to end of pasted string
-        if self.mcSettings.controlMode == 'default':
-            key.tap(key.K_BACKSPACE) # Clear trailing space
-        key.tap(key.K_RETURN) # Execute cd command
+        pyautogui.press('right') # Move to end of pasted string
+        # if self.mcSettings.controlMode == 'default':
+        #     pyautogui.press('backspace') # Clear trailing space
+        pyautogui.press('return') # Execute cd command
         time.sleep(self.mcSettings.sleepSLc1 + self.mcSettings.sleepSLc2)
         util.click(int(self.mcSettings.clickPosition8 *
                        self.sWidthF), int(self.mcSettings.clickPosition9 *
                                           self.sHeightF)) # Select dialog box at outermost level
-        key.tap(key.K_RETURN)  # Save
+        pyautogui.press('return')  # Save
         time.sleep(self.mcSettings.sleepSave)
 
     def __close_app__(self):

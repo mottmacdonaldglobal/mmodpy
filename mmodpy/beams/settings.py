@@ -15,15 +15,15 @@ class settings:
     def __init__(self, aData):
 
         # Mouse position settings (change if mouse positions are incorrect)
-        self.clickPosition1 = 60 # Click 'Project Name' - x
-        self.clickPosition2 = 105 # Click 'Project Name' - y
-        self.clickPosition3 = 125 # Click 'Show Data' - x
-        self.clickPosition4 = 170 # Click 'Show Data' - y
+        self.clickPosition1 = 125 # Click 'Project Name' - x
+        self.clickPosition2 = 125 # Click 'Project Name' - y
+        self.clickPosition3 = 200 # Click 'Show Data' - x
+        self.clickPosition4 = 195 # Click 'Show Data' - y
         self.clickPosition5 = 700 # Click 'Select All' - x
-        self.clickPosition6 = 1025 # Click 'Select All' or 'Save Data' - y
+        self.clickPosition6 = 1010 # Click 'Select All' or 'Save Data' - y
         self.clickPosition7 = 842 # Click 'Save Data' - x
         self.clickPosition8 = 1300 # Select dialog box at outermost level - x
-        self.clickPosition9 = 400 # Select dialog box at outermost level - y
+        self.clickPosition9 = 95 # Select dialog box at outermost level - y
         
         # Time settings (all wait times in seconds, changes not necessary)
         self.sleepLaunch = 6  # Post-launch wait time

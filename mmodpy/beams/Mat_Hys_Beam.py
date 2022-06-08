@@ -164,10 +164,12 @@ class Mat_Hys_Beam(Shear_Calcs):
             Mphi_yy = pd.DataFrame({'Mxx (N-m)': yM, 'phi_xx (1/m)': yPhi})
             if len(Mphi_xx) < len(Mphi_yy):
                 self.M_phi = pd.concat(
-                    [Mphi_xx, Mphi_yy], axis=1, join_axes=[Mphi_xx.index])
+                    [Mphi_xx, Mphi_yy], axis=1)
+                self.M_phi = self.M_phi.reindex(Mphi_xx.index)
             else:
                 self.M_phi = pd.concat(
-                    [Mphi_xx, Mphi_yy], axis=1, join_axes=[Mphi_yy.index])
+                    [Mphi_xx, Mphi_yy], axis=1)
+                self.M_phi = self.M_phi.reindex(Mphi_yy.index)
 
         # Write curves in ".csv" files
         self.P_m.to_csv(aData.pSave + '\\' + 'Moment_Interaction_' +
@@ -363,8 +365,8 @@ class Mat_Hys_Beam(Shear_Calcs):
         E = float(aData.Ec) * 1e6
 
         # Concatenate curves
-        M_theta_pl = pd.concat([M_theta_pl_xx, M_theta_pl_yy],
-                               axis=1, join_axes=[M_theta_pl_xx.index])
+        M_theta_pl = pd.concat([M_theta_pl_xx, M_theta_pl_yy],axis=1)
+        M_theta_pl = M_theta_pl.reindex(M_theta_pl_xx.index)
         M_theta_pl.columns = ['Mxx (N-m)', 'ThetaP_xx (radians)',
                               'Myy (N-m)', 'ThetaP_yy (radians)']
 

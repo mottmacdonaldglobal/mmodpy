@@ -14,9 +14,6 @@ Required:
 * Windows 7 or later
 * Working XTRACT.exe (v3.08)
 * Python 3
-* autopy3
-	- [Documentation](https://github.com/Riamse/autopy3)
-	- [Installation file](Resources/autopy3-0.51.1-cp37-cp37m-win_amd64.whl)
 
 ## Usage
 
