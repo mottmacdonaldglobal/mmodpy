@@ -161,7 +161,7 @@ class Mat_Hys_Beam(Shear_Calcs):
         else:
             print('         M-phi interpretation = direct (' + str(aData.cLimits) + ')')
             Mphi_xx = pd.DataFrame({'Mxx (N-m)': xM, 'phi_xx (1/m)': xPhi})
-            Mphi_yy = pd.DataFrame({'Mxx (N-m)': yM, 'phi_xx (1/m)': yPhi})
+            Mphi_yy = pd.DataFrame({'Myy (N-m)': yM, 'phi_yy (1/m)': yPhi})
             if len(Mphi_xx) < len(Mphi_yy):
                 self.M_phi = pd.concat(
                     [Mphi_xx, Mphi_yy], axis=1)
